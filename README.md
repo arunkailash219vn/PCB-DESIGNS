@@ -12,12 +12,16 @@ The schematic is modular and organized into the following functional blocks:
 Supports USB power input (5V).
 Includes a power selection circuit to manage input sources.
 Ensures safe routing and stable supply to downstream components.
+
 🔋 2. Voltage Regulation (5V → 3.3V)
 Uses a linear voltage regulator to step down 5V to 3.3V.
 Critical for ESP32 operation (as ESP32 operates at 3.3V logic).
+
+
 Includes:
 Input/output decoupling capacitors
 Noise filtering for stable voltage
+
 🔗 3. USB Connector Interface
 Micro USB interface for:
 Power supply
@@ -26,6 +30,7 @@ Includes:
 ESD protection diodes
 Filtering capacitors
 Proper grounding ensures signal integrity.
+
 🔄 4. USB-to-Serial (UART) Bridge
 Converts USB signals to UART for ESP32 communication.
 Enables:
@@ -35,6 +40,7 @@ Connected to ESP32 RX/TX pins.
 Includes:
 Required pull-ups/pull-downs
 Stable clocking and power connections
+
 🧠 5. ESP32 Module
 Core processing unit of the board.
 Features:
@@ -42,6 +48,7 @@ Wi-Fi + Bluetooth capability
 Multiple GPIO pins
 ADC, DAC, PWM, UART, SPI, I2C
 Proper pin breakout for external interfacing.
+
 💡 6. LED Indicators
 Power LED
 Indicates board power status.
@@ -49,12 +56,14 @@ Connected to 3.3V via current-limiting resistor.
 User LED
 Connected to a GPIO pin.
 Programmable for debugging or status indication.
+
 🎛️ 7. Buttons (User Input)
 Includes push buttons for:
 Reset
 Boot/Flash mode
 Proper debouncing via capacitors.
 Essential for firmware upload and control.
+
 🔌 8. GPIO Headers (17-Pin Expansion)
 Breakout headers for:
 Easy interfacing with sensors/modules
@@ -62,12 +71,14 @@ Provides access to:
 Digital I/O
 Power rails (3.3V, GND)
 Designed for breadboard compatibility.
+
 🔧 9. Serial Signal Handling
 Includes transistor-based control logic.
 Used for:
 Auto-reset
 Auto-boot during programming
 Ensures seamless firmware flashing.
+
 ⚙️ Design Considerations
 Signal Integrity
 Decoupling capacitors placed near ICs.
@@ -80,6 +91,7 @@ GPIO headers allow flexible hardware integration.
 Safety
 ESD protection on USB lines.
 Current-limiting resistors for LEDs.
+
 🛠️ Tools Used
 EasyEDA – Schematic design and PCB layout
 Standard electronic components (SMD/Through-hole)
@@ -89,6 +101,7 @@ ESP32-Tutorial/
 ├── Schematic1          # Main schematic file
 ├── PCB1                # PCB layout (if available)
 ├── README.md           # Project documentation
+
 🚀 How to Use
 Open the project in EasyEDA
 Review schematic blocks
@@ -96,16 +109,19 @@ Review schematic blocks
 Fabricate PCB using Gerber files
 Assemble components
 Program ESP32 via USB
+
 🔍 Applications
 IoT devices
 Smart home systems
 Embedded prototyping
 Wireless sensor networks
+
 📈 Future Improvements
 Add battery charging circuit
 Include onboard sensors
 Optimize PCB layout for compactness
 Add USB-C support
+
 🤝 Contributing
 
 Contributions are welcome. You can:
